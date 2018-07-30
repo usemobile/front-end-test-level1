@@ -22,7 +22,7 @@ Este repositório possui um projeto de site incompleto usando o framework **Angu
 * Clone o projeto em sua máquina;
 * Execute o comando `npm start` para visualizar o site em sua máquina;
 * Faça as alterações soliciadas;
-* Mande um e-mail com o link para download do `.zip` do seu projeto para patrick@usemobile.com.br. Fale um pouco de suas dificuldades e desafios durante o desenvolvimento de suas soluções no e-mail.
+* Mande um e-mail com o link para download do .zip do seu projeto para patrick@usemobile.com.br com o titutlo "[front-end-test] - [SEU_NOME]". Fale um pouco de suas dificuldades e desafios durante o desenvolvimento de suas soluções no e-mail.
 
 Uma breve documentação do template utilizado:
 ##### estrutura de pastas
