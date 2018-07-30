@@ -19,11 +19,10 @@ Este repositório possui um projeto de site incompleto usando o framework **Angu
 * Ter um navegador de sua preferência.
 
 ### Instruções
-* Clone o repositório em sua máquina;
+* Dê um fork no repositório e clone o projeto em sua máquina;
 * Execute o comando `npm start` para visualizar o site em sua máquina;
 * Faça as alterações soliciadas;
-* Complemente o `readme.md` falando um pouco de suas dificuldades e desafios durante o desenvolvimento de suas soluções;
-* Envie os arquivos para ??.
+* Faça um pull request no repositório. Fale um pouco de suas dificuldades e desafios durante o desenvolvimento de suas soluções no mesmo.
 
 Uma breve documentação do template utilizado:
 ##### estrutura de pastas
@@ -52,4 +51,5 @@ front-end-test-level1
 ### Dicas
 * O template foi feito baseado no projeto [Centric](http://themicon.co/theme/centric/v1.9.5/angularjs/#/app/dashboard). Conferir a documentação do mesmo deve ajudá-lo na construção das telas;
 * Não se preocupe com back-end e banco de dados. Queremos ver os comportamentos funcionando no front-end;
+* Seja amiga da [documentação do AngularJs](https://docs.angularjs.org/api);
 * Tente comentar seu código nas linhas mais importantes.
