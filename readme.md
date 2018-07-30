@@ -22,7 +22,7 @@ Este repositório possui um projeto de site incompleto usando o framework **Angu
 * Dê um fork no repositório e clone o projeto em sua máquina;
 * Execute o comando `npm start` para visualizar o site em sua máquina;
 * Faça as alterações soliciadas;
-* Faça um pull request no repositório. Fale um pouco de suas dificuldades e desafios durante o desenvolvimento de suas soluções no mesmo.
+* Faça um pull request no repositório. Fale um pouco de suas dificuldades e desafios durante o desenvolvimento de suas soluções nos comentários.
 
 Uma breve documentação do template utilizado:
 ##### estrutura de pastas
