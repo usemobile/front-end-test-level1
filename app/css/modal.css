@@ -1,0 +1,27 @@
+.my-modal .modal-head {
+    padding: 16px;
+}
+
+.modal-content {
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.my-modal .new-service-heading {
+    color: #49679C;
+    margin-bottom: 10px;
+}
+
+.my-modal .new-service-heading i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.my-modal .new-service-heading span {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.my-modal .new-service-heading img {
+    margin-right: 10px;
+}

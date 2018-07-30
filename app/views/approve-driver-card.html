@@ -1,0 +1,24 @@
+<div class="photo">
+  <div>
+    <div data-ng-if="card.showIndex" class="photo-index">
+      <p>The $index of the card is</p>
+      <p class="balloon-wrapper"><span class="balloon">{{card.$index}}</span></p>
+    </div>
+    <div class="photo-wrapper">
+      <img data-ng-src="{{card.photo}}" ng-show="card.photo" data-imageloaded="" data-loadedclass="photoloaded" class="img-responsive fw"/>
+      <img src="/assets/default-avatar.png" ng-hide="card.photo" data-imageloaded="" data-loadedclass="photoloaded" class="img-responsive fw"/>
+      <div class="photo-loader">
+        <div class="sk-spinner sk-spinner-rotating-plane"></div>
+      </div>
+    </div>
+    <div class="photo-description">
+      <a ng-href="/#/app/driver/{{card.id}}"><h4 class="m0">{{card.name}}</h4></a>
+      <p class="mt-sm mb0">
+        <a ng-click="mother.visualize(card.cnh)">CNH</a> | <a ng-click="mother.visualize(card.licensing)">Licenciamento do veículo</a> | <a ng-click="mother.visualize(card.alvara)">Alvará</a>
+      </p>
+    </div>
+  </div>
+  <div class="card-footer text-center">
+    <button type="button" class="btn btn-success" ng-click="mother.approve(card)">APROVAR</button>
+  </div>
+</div>

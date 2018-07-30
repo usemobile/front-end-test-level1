@@ -1,0 +1,23 @@
+[
+	{
+		"itemId": "1",
+		"itemName": "Arroz",
+		"value": 12,
+		"amount": 2
+	},{
+		"itemId": "2",
+		"itemName": "Feijão",
+		"value": 8.49,
+		"amount": 2
+	},{
+		"itemId": "3",
+		"itemName": "Café",
+		"value": 5.49,
+		"amount": 5
+	},{
+		"itemId": "4",
+		"itemName": "Lâmpada LED",
+		"value": 18,
+		"amount": 1
+	}
+]

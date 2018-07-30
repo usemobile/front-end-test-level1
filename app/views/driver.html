@@ -1,0 +1,253 @@
+<div class="" ng-controller="DriverCtrl">
+    <div class="container-overlap text-white" style="background-color: #00516f">
+      <div class="media m0 pv">
+        <div class="media-left">
+            <img ng-src="{{driver.photo}}" ng-show="driver.photo" alt="User" class="media-object img-circle thumb64"/>
+            <img src="/assets/default-avatar.png" ng-hide="driver.photo" alt="User" class="media-object img-circle thumb64"/>
+        </div>
+        <div class="media-body media-middle">
+          <h4 class="media-heading m0">{{driver.name}} {{driver.lastname}}<button class="mb-sm btn ripple float-right" ng-class="{'btn-success': driver.blocked, 'btn-danger': !driver.blocked}" ng-click="block()" ng-disabled="blocking">
+            <span ng-show="driver.blocked">DESBLOQUEAR</span>
+            <span ng-hide="driver.blocked">BLOQUEAR</span>
+          </button></h4>
+          <div style="pointer-events: none" uib-rating="uib-rating" ng-model="driver.rate" max="5" readonly="" state-on="'ion-ios-star text-white'" state-off="'ion-ios-star-outline'"></div>
+          <span class="text-muted">
+            <a class="white-link" ng-click="visualize(driver.cnh)">CNH</a> | <a class="white-link" ng-click="visualize(driver.licensing)">Licenciamento do veículo</a> | <a class="white-link" ng-click="visualize(driver.alvara)">Alvará</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body pv">
+                  <div class="clearfix">
+                    <div class="">
+                      <small class="m0 text-muted">Total de viagens</small><h4 class="m0 text-thin">350</h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body pv">
+                  <div class="clearfix">
+                    <div class="">
+                      <small class="m0 text-muted">Total de ganhos</small><h4 class="m0 text-thin">R$ 1000,00</h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body pv">
+                  <div class="clearfix">
+                    <div class="">
+                      <small class="m0 text-muted">Status</small><h4 class="m0 text-thin">
+                        <span ng-show="driver.status == 'waiting'">Aguardando</span>
+                        <span ng-show="driver.status == 'approved'">Aprovado</span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-heading">
+                  <div class="card-title">Dados Pessoais</div>
+                </div>
+                <div class="card-body">
+                    <div class="row no-margin">
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>RG</label>
+                                <span>{{driver.rg}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>CPF</label>
+                                <span>{{driver.cpf}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>CNH</label>
+                                <span class="ellipsis">{{driver.cnh}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>E-mail</label>
+                                <span>{{driver.email}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Telefone</label>
+                                <span>{{driver.phone}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Celular</label>
+                                <span>{{driver.cellphone}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-field">
+                                <label>Endereço</label>
+                                <span>{{driver.address}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Número</label>
+                                <span>{{driver.number}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Bairro</label>
+                                <span>{{driver.neighborhood}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Cidade</label>
+                                <span>{{driver.city}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Estado</label>
+                                <span>{{driver.estate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-heading">
+                  <div class="card-title">Dados Bancários</div>
+                </div>
+                <div class="card-body">
+                    <div class="row no-margin">
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Banco</label>
+                                <span>{{driver.bankAccount.bankName}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Agência</label>
+                                <span>{{driver.bankAccount.agencia}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Conta</label>
+                                <span>{{driver.bankAccount.conta}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-heading">
+                  <div class="card-title">Dados do Veículo</div>
+                </div>
+                <div class="card-body">
+                    <div class="row no-margin">
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Marca</label>
+                                <span>Citroen</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Veículo</label>
+                                <span>Aircross ELX</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Ano</label>
+                                <span>2014</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Placa</label>
+                                <span>EGX-2587</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Categoria</label>
+                                <span>Bag</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Cor</label>
+                                <span>Prata</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-heading">
+                  <div class="card-title">Histórico</div>
+                </div>
+                <div class="card-body no-padding">
+                    <div class="table-responsive">
+                        <table ng-table="tableParams">
+                            <tbody>
+                                <tr ng-repeat="item in $data">
+                                    <td data-title="'Cliente'" sortable="'clientName'">
+                                        <a ng-href="/#/app/client/{{item.clientId}}">{{item.clientName}}</a>
+                                    </td>
+                                    <td data-title="'Origem'" sortable="'origin'">{{item.origin}}</td>
+                                    <td data-title="'Destino'" sortable="'destiny'">{{item.destiny}}</td>
+                                    <td data-title="'Status'" sortable="'status'">{{item.status}}</td>
+                                </tr>
+                                <tr ng-show="!history || history.length == 0">
+                                    <td class="no-registers" colspan="4">
+                                        <span>Sem registros</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table-footer">
+                                <span class="footer-numbers">
+                                    {{(tableParams.page()-1)*tableParams.parameters().count + 1}}-<span ng-show="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.total()}}</span><span ng-hide="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.page()*tableParams.parameters().count}}</span> of {{tableParams.total()}}
+                                </span>
+                            <div class="footer-buttons">
+                                <a ng-disabled="tableParams.page() <= 1" ng-click="tableParams.page(tableParams.page()-1)">
+                                    <i class="ion-ios-arrow-left"></i>
+                                </a>
+                                <a ng-disabled="tableParams.page() >= tableParams.total()/tableParams.parameters().count" ng-click="tableParams.page(tableParams.page()+1)">
+                                    <i class="ion-ios-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

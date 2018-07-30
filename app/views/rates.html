@@ -1,0 +1,62 @@
+<div class="" ng-controller="RatesCtrl">
+    <div class="content-body row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="container-fluid">
+                <div class="card payment">
+                    <div class="card-heading">
+                        <div class="icon-heading-body">
+                            <div class="card-title">Configuração de Tarifas</div>
+                        </div>
+                        <div class="add-btn">
+                            <button type="button" class="add-button btn btn-circle btn-info btn-lg ripple" ng-click="addRate()">
+                                <i class="ion-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body no-padding">
+                        <div class="table-responsive">
+                            <table ng-table="tableParams">
+                                <tbody>
+                                    <tr ng-repeat="item in $data">
+                                        <!-- <td data-title="'Id'">{{$index + 1}}</td> -->
+                                        <td data-title="'Tarifa'" sortable="'name'" nowrap>{{item.name}}</td>
+                                        <td data-title="'Dias'" nowrap>{{item.formattedDays}}</td>
+                                        <td data-title="'Horário'" sortable="'startTime'" nowrap>{{item.startTime | date:"shortTime"}} - {{item.endTime | date:"shortTime"}}</td>
+                                        <td data-title="'Bandeira'" sortable="'flag'" nowrap>{{item.flag}}</td>
+                                        <td data-title="'Valor/km'" sortable="'value'" nowrap>{{item.value}}</td>
+                                        <td data-title="'Desconto'" sortable="'discount'" nowrap>{{item.discount}}%</td>
+                                        <td data-title="'Doação em %'" sortable="'donation'" nowrap>{{item.donation}}%</td>
+                                        <td data-title="'Status'" sortable="'status'" nowrap>
+                                            <span ng-show="item.status == 'active'">Ativo</span>
+                                            <span ng-show="item.status == 'inactive'">Inativo</span>
+                                        </td>
+                                    </tr>
+                                    <tr ng-show="!rates || rates.length == 0">
+                                        <td class="no-registers" colspan="8">
+                                            <!--<img src="assets/ic-caixamaior.svg"/>-->
+                                            <span>Sem registros</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="table-footer">
+                                    <span class="footer-numbers">
+                                        {{(tableParams.page()-1)*tableParams.parameters().count + 1}}-<span ng-show="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.total()}}</span><span ng-hide="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.page()*tableParams.parameters().count}}</span> of {{tableParams.total()}}
+                                    </span>
+                                <div class="footer-buttons">
+                                    <a ng-disabled="tableParams.page() <= 1" ng-click="tableParams.page(tableParams.page()-1)">
+                                        <i class="ion-ios-arrow-left"></i>
+                                    </a>
+                                    <a ng-disabled="tableParams.page() >= tableParams.total()/tableParams.parameters().count" ng-click="tableParams.page(tableParams.page()+1)">
+                                        <i class="ion-ios-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-include src="'app/templates/newRate.html'"></ng-include>

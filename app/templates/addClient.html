@@ -1,0 +1,56 @@
+<script type="text/ng-template" id="addClient.html">
+    <div class="my-modal">
+        <form name="form" novalidate="" ng-submit="submitForm()">
+            <div class="modal-head bg-darkblue">
+                <h4 class="modal-title">Novo cliente</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mda-form-group">
+                            <div class="mda-form-control">
+                                <input type="text" name="name" required="" ng-model="name" class="form-control"/>
+                                <div class="mda-form-control-line"></div>
+                                <label class="control-label">Nome</label>
+                            </div>
+                            <div ng-messages="form.name.$error" class="text-danger">
+                                <span ng-message="required" ng-if="form.$submitted">Este campo é obrigatório</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mda-form-group">
+                            <div class="mda-form-control">
+                                <input type="text" name="lastname" required="" ng-model="lastname" class="form-control"/>
+                                <div class="mda-form-control-line"></div>
+                                <label class="control-label">Sobrenome</label>
+                            </div>
+                            <div ng-messages="form.lastname.$error" class="text-danger">
+                                <span ng-message="required" ng-if="form.$submitted">Este campo é obrigatório</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mda-form-group">
+                            <div class="mda-form-control">
+                                <input type="text" name="cpf" required="" ng-model="cpf" class="form-control" ui-mask="999.999.999-99"/>
+                                <div class="mda-form-control-line"></div>
+                                <label class="control-label">CPF</label>
+                            </div>
+                            <div ng-messages="form.cpf.$error" class="text-danger">
+                                <span ng-message="required" ng-if="form.$submitted">Este campo é obrigatório</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-flat btn-info ripple" ng-click="close()">cancelar</button>
+                <button type="submit" class="btn btn-flat btn-info ripple" ng-disabled="loading">
+                    <span ng-show="loading">salvando</span>
+                    <span ng-hide="loading">salvar</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</script>

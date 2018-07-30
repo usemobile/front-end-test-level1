@@ -1,0 +1,106 @@
+<div class="" ng-controller="ClientCtrl">
+    <div class="container-overlap text-white" style="background-color: #00516f">
+      <div class="media m0 pv">
+        <div class="media-left"><a href="#">
+            <img ng-src="{{client.photo}}" ng-show="client.photo" alt="User" class="media-object img-circle thumb64"/>
+            <img src="/assets/default-avatar.png" ng-hide="client.photo" alt="User" class="media-object img-circle thumb64"/>
+        </a></div>
+        <div class="media-body media-middle">
+          <h4 class="media-heading m0">{{client.name}}</h4>
+          <!-- <div style="pointer-events: none" uib-rating="uib-rating" ng-model="client.rate" max="5" readonly="" state-on="'ion-ios-star text-white'" state-off="'ion-ios-star-outline'"></div> -->
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body pv">
+                  <div class="clearfix">
+                    <div class="">
+                      <small class="m0 text-muted">Total de viagens</small><h4 class="m0 text-thin">{{client.totalTravels}}</h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body pv">
+                  <div class="clearfix">
+                    <div class="">
+                      <small class="m0 text-muted">Total de ganhos</small><h4 class="m0 text-thin">R$ 1000,00</h4>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-heading">
+                  <div class="card-title">Dados Pessoais</div>
+                </div>
+                <div class="card-body">
+                    <div class="row no-margin">
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>E-mail</label>
+                                <span>{{client.email}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Telefone</label>
+                                <span>{{client.phone}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-field">
+                                <label>Celular</label>
+                                <span>{{client.mobile}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-heading">
+                  <div class="card-title">Histórico</div>
+                </div>
+                <div class="card-body no-padding">
+                    <div class="table-responsive">
+                        <table ng-table="tableParams">
+                            <tbody>
+                                <tr ng-repeat="item in $data">
+                                    <td data-title="'Origem'" sortable="'originAddress'">{{item.originAddress}}</td>
+                                    <td data-title="'Destino'" sortable="'destinyAddress'">{{item.destinyAddress}}</td>
+                                    <td data-title="'Status'" sortable="'status'">{{item.status}}</td>
+                                </tr>
+                                <tr ng-show="!history || history.length == 0">
+                                    <td class="no-registers" colspan="3">
+                                        <span>Sem registros</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="table-footer">
+                                <span class="footer-numbers">
+                                    {{(tableParams.page()-1)*tableParams.parameters().count + 1}}-<span ng-show="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.total()}}</span><span ng-hide="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.page()*tableParams.parameters().count}}</span> of {{tableParams.total()}}
+                                </span>
+                            <div class="footer-buttons">
+                                <a ng-disabled="tableParams.page() <= 1" ng-click="tableParams.page(tableParams.page()-1)">
+                                    <i class="ion-ios-arrow-left"></i>
+                                </a>
+                                <a ng-disabled="tableParams.page() >= tableParams.total()/tableParams.parameters().count" ng-click="tableParams.page(tableParams.page()+1)">
+                                    <i class="ion-ios-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

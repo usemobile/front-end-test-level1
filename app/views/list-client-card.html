@@ -1,0 +1,15 @@
+<div class="photo">
+  <div>
+    <div class="photo-wrapper">
+      <img data-ng-src="{{card.photo}}" ng-show="card.photo" data-imageloaded="" data-loadedclass="photoloaded" class="img-responsive fw"/>
+      <img src="/assets/default-avatar.png" ng-hide="card.photo" data-imageloaded="" data-loadedclass="photoloaded" class="img-responsive fw"/>
+      <div class="photo-loader">
+        <div class="sk-spinner sk-spinner-rotating-plane"></div>
+      </div>
+    </div>
+    <div class="photo-description">
+      <a ng-href="/#/app/client/{{card.id}}"><h4 class="m0">{{card.name}}</h4></a>
+      <p class="m0 ellipsis">{{card.email}}</p>
+    </div>
+  </div>
+</div>

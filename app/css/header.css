@@ -1,0 +1,77 @@
+.header-container > nav> ul > li.user-btn > a > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header-container > nav> ul > li.help-btn > a {
+    color: #E2005C;
+    padding: 0;
+}
+
+.header-container > nav > .header-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: left;
+    color: white;
+    z-index: -1;
+}
+
+.header-body .header-logo,
+.sidebar-header .header-logo {
+    display: inline-block;
+    line-height: 63px;
+}
+
+.header-body .header-logo {
+    margin-left: 35px;
+}
+
+.header-container.core .header-body .header-logo {
+    display: none;
+}
+
+.header-body .header-logo > img,
+.sidebar-header .header-logo > img {
+    width: 200px;
+    /*height: 34px;*/
+}
+
+.header-body .header-logo > span,
+.sidebar-header .header-logo > span {
+    font-size: 9px;
+    background-color: #e2005c;
+    padding: 2px 5px 1px;
+    border-radius: 7px;
+    margin-left: 5px;
+}
+
+.sidebar-header .header-logo {
+    color: white;
+}
+
+.sidebar-header .header-logo:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .header-container > nav > .header-title {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-container > nav > .header-title {
+        text-align: left;
+    }
+
+    .header-container:not(.nosidebar) > nav > .header-title {
+        padding-left: 50px;
+    }
+
+    .header-container > nav > .header-logo {
+        display: none;
+    }
+}

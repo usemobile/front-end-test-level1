@@ -1,0 +1,125 @@
+<!-- <div ng-controller="ContactCtrl" class="container container-md">
+  <div class="card" style="overflow: visible">
+    <table class="table table-hover table-fixed va-middle">
+      <tbody>
+        <tr ng-repeat="message in messages">
+          <td class="wd-xxs" ng-click="display($index)">
+            <img ng-src="{{message.passenger.profileImage}}" ng-show="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+            <img src="/assets/default-avatar.png" ng-hide="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+          </td>
+          <td class="text-ellipsis wd-sm" ng-click="display($index)">
+            <span class="text-muted" ng-hide="message.message.solved">Pendente</span>
+            <span class="text-muted" ng-show="message.message.solved">Resolvido</span>
+            <span class="message-sender">{{message.passenger.name}}</span>
+            <span class="text-muted">{{message.passenger.email}}</span>
+          </td>
+          <td class="text-ellipsis" ng-click="display($index)"><span style="color: #777">{{message.message.type}} &minus; </span>{{message.message.text}}</td>
+          <td class="wd-xxs" ng-show="message.message.solved" ng-click="display($index)"></td>
+          <td class="wd-xxs" ng-hide="message.message.solved">
+            <div uib-dropdown="dropdown2" class="pull-right dropdown">
+              <button type="button" uib-dropdown-toggle="" ng-click="$event.stopPropagation()" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+              <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                <li><a ng-click="solve($index)"><em class="ion-android-done icon-fw"></em>Resolvido</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+<div ng-controller="ContactCtrl" class="container container-md">
+  <div ng-show="messages.today && messages.today.length > 0">
+    <p class="ph">Hoje</p>
+    <div class="card" style="overflow: visible">
+      <table class="table table-hover table-fixed va-middle">
+        <tbody>
+          <tr ng-repeat="message in messages.today">
+            <td class="wd-xxs" ng-click="display('today', $index)">
+              <img ng-src="{{message.passenger.profileImage}}" ng-show="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+            </td>
+            <td class="text-ellipsis wd-sm" ng-click="display('today', $index)">
+              <span class="text-muted" ng-hide="message.message.solved">Pendente</span>
+              <span class="text-muted" ng-show="message.message.solved">Resolvido</span>
+              <span class="message-sender">{{message.passenger.name}}</span>
+              <span class="text-muted">{{message.passenger.email}}</span>
+            </td>
+            <td class="text-ellipsis" ng-click="display('today', $index)"><span style="color: #777">{{message.message.type}} &minus; </span>{{message.message.text}}</td>
+            <td class="wd-xxs" ng-show="message.message.solved" ng-click="display('today', $index)"></td>
+            <td class="wd-xxs" ng-hide="message.message.solved">
+              <div uib-dropdown="dropdown2" class="pull-right dropdown">
+                <button type="button" uib-dropdown-toggle="" ng-click="$event.stopPropagation()" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+                <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                  <li><a ng-click="solve('today', $index)"><em class="ion-android-done icon-fw"></em>Resolvido</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+  </div>
+  <div ng-show="messages.yesterday && messages.yesterday.length > 0">
+    <p class="ph">Ontem</p>
+    <div class="card" style="overflow: visible">
+      <table class="table table-hover table-fixed va-middle">
+        <tbody>
+          <tr ng-repeat="message in messages.yesterday">
+            <td class="wd-xxs" ng-click="display('yesterday', $index)">
+              <img ng-src="{{message.passenger.profileImage}}" ng-show="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+            </td>
+            <td class="text-ellipsis wd-sm" ng-click="display('yesterday', $index)">
+              <span class="text-muted" ng-hide="message.message.solved">Pendente</span>
+              <span class="text-muted" ng-show="message.message.solved">Resolvido</span>
+              <span class="message-sender">{{message.passenger.name}}</span>
+              <span class="text-muted">{{message.passenger.email}}</span>
+            </td>
+            <td class="text-ellipsis" ng-click="display('yesterday', $index)"><span style="color: #777">{{message.message.type}} &minus; </span>{{message.message.text}}</td>
+            <td class="wd-xxs" ng-show="message.message.solved" ng-click="display('yesterday', $index)"></td>
+            <td class="wd-xxs" ng-hide="message.message.solved">
+              <div uib-dropdown="dropdown2" class="pull-right dropdown">
+                <button type="button" uib-dropdown-toggle="" ng-click="$event.stopPropagation()" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+                <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                  <li><a ng-click="solve('yesterday', $index)"><em class="ion-android-done icon-fw"></em>Resolvido</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>
+  <div ng-show="messages.old && messages.old.length > 0">
+    <p class="ph">Mais antigas</p>
+    <div class="card" style="overflow: visible">
+      <table class="table table-hover table-fixed va-middle">
+        <tbody>
+          <tr ng-repeat="message in messages.old">
+            <td class="wd-xxs" ng-click="display('old', $index)">
+              <img ng-src="{{message.passenger.profileImage}}" ng-show="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="message.passenger.profileImage" alt="user" class="img-circle thumb32"/>
+            </td>
+            <td class="text-ellipsis wd-sm" ng-click="display('old', $index)">
+              <span class="text-muted" ng-hide="message.message.solved">Pendente</span>
+              <span class="text-muted" ng-show="message.message.solved">Resolvido</span>
+              <span class="message-sender">{{message.passenger.name}}</span>
+              <span class="text-muted">{{message.passenger.email}}</span>
+            </td>
+            <td class="text-ellipsis" ng-click="display('old', $index)"><span style="color: #777">{{message.message.type}} &minus; </span>{{message.message.text}}</td>
+            <td class="wd-xxs" ng-show="message.message.solved" ng-click="display('old', $index)"></td>
+            <td class="wd-xxs" ng-hide="message.message.solved">
+              <div uib-dropdown="dropdown2" class="pull-right dropdown">
+                <button type="button" uib-dropdown-toggle="" ng-click="$event.stopPropagation()" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+                <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                  <li><a ng-click="solve('old', $index)"><em class="ion-android-done icon-fw"></em>Resolvido</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>
+</div>

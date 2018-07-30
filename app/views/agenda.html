@@ -1,0 +1,37 @@
+<div class="container-fluid page-agenda">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-heading">
+					<a ng-click="previous()" class="left"><i class="ion-arrow-left-b"></i></a>
+					<div class="card-title">{{months[month]}} {{year}}</div>
+					<a ng-click="next()" class="right"><i class="ion-arrow-right-b"></i></a>
+				</div>
+				<div class="card-body no-padding">
+					<div class="table-responsive">
+						<table class="agenda">
+							<thead>
+								<tr>
+									<td><span class="day">D</span></td>
+									<td><span class="day">S</span></td>
+									<td><span class="day">T</span></td>
+									<td><span class="day">Q</span></td>
+									<td><span class="day">Q</span></td>
+									<td><span class="day">S</span></td>
+									<td><span class="day">S</span></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="row in dateRows">
+									<td ng-repeat="date in row" valign="top" ng-class="{'not-this-month': date.getMonth() != month}">
+										<span class="day" ng-class="{'marked': date.getDate() == 3}">{{date | date:"d"}}</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

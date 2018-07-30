@@ -1,0 +1,770 @@
+.mda-input-group-addon .icon-lg {
+    color: #E2005C;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.bg-pink {
+    background-color: #E2005C;
+    color: white;
+}
+
+.bg-darkblue {
+    background-color: #49679C;
+    color: white;
+}
+
+.mda-form-control.currency-input > input {
+    padding-left: 20px;
+}
+
+.mda-form-control.currency-input > .currency {
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    /*color: #555;*/
+}
+
+.mda-form-group.time-input {
+    width: calc(100% - 26px);
+    display: inline-block;
+}
+
+.md-button.md-icon-button {
+    margin: 0;
+}
+
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.mda-form-group .mda-form-control .add-btn {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.input-message {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.md-datepicker-calendar-pane {
+    z-index: 1051;
+}
+
+.mda-form-group.form-date {
+    padding-bottom: 10px;
+}
+
+.mda-form-group.form-date .mda-form-control {
+    border-bottom: 0 none;
+    /*padding-top: 25px;*/
+}
+
+.input-maxlength {
+    display: block;
+    text-align: right;
+}
+
+.upload-logo-btn {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.upload-logo-btn .upload-logo-label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+.upload-logo-btn:hover .upload-logo-label {
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.upload-logo-btn .upload-logo-label .div-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - 19px);
+    text-align: center;
+}
+
+.upload-logo-btn .upload-logo-label .div-container span {
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 18px;
+    display: inline-block;
+}
+
+.upload-logo-btn .upload-logo-label .div-container span i {
+    margin-right: 5px;
+}
+
+.light-heading {
+    color: #D40159;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+table .check-col {
+    width: 40px;
+    padding-left: 10px;
+}
+
+table .check-col .checkbox,
+table .check-col .checkbox > label > span {
+    margin-right: 0;
+}
+
+table .check-col .checkbox > label > input {
+    width: 0;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    border: 0 none;
+    overflow: hidden;
+}
+
+.icon-heading {
+    color: #e2005c;
+    background-color: #F1F1F1;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    font-size: 22px;
+    padding-top: 3px;
+    margin-right: 10px;
+}
+
+.icon-heading > img {
+    /*height: 23px;*/
+}
+
+.icon-heading-body {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.display-none {
+    display: none;
+}
+
+.card .card-heading {
+    position: relative;
+}
+
+.page-config.prof .main-heading-card .card-heading button,
+.card-heading .add-btn {
+    position: absolute;
+    bottom: -23px;
+    right: 20px;
+    z-index: 1;
+}
+
+.my-modal.upload-images table {
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.my-modal .table-div {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.my-modal.upload-images .table-div {
+    margin-bottom: -15px;
+}
+
+.my-modal.upload-images .image-col {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+.no-results {
+    text-align: center;
+    color: #ccc;
+    font-size: 30px;
+    padding: 50px 16px;
+}
+
+.card.no-results {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 50px 16px;
+}
+
+.ng-table {
+    width: 100%;
+}
+
+.ng-table thead {
+    background-color: #49679C;
+    color: white;
+}
+
+.ng-table thead tr th,
+.ng-table tbody tr td {
+    font-weight: normal;
+    padding: 15px;
+}
+
+.ng-table tbody tr td {
+    color: #757575;
+    border-bottom: 1px solid #f1f1f1
+}
+.ng-table tbody tr td.no-registers,
+table td.no-registers {
+    padding: 80px 0;
+    text-align: center;
+}
+
+table td.no-registers > span {
+    color: #d8d8d8;
+    font-size: 24px;
+    display: block;
+    margin: 20px 0;
+}
+
+a[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.table-footer {
+    text-align: right;
+    margin: 10px 10px 50px 10px;
+}
+
+.table-footer .footer-numbers {
+    color: #757575;
+}
+
+.table-footer .footer-buttons {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.ng-table-pager {
+    /*margin: 10px 10px 5px;*/
+    display: none;
+}
+
+.table-footer .footer-buttons a {
+    color: #9e9e9e;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.ninja-mode {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox.linear {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.content-body.row {
+    margin: 0;
+}
+
+.card-body.no-padding {
+    padding: 0;
+}
+
+.mda-form-control.big-label {
+    padding-top: 32px;
+}
+
+.mda-form-control.big-label label {
+    font-size: 24px;
+}
+
+.mda-form-control.big-label > input:focus ~ label,
+.mda-form-control.big-label > select:focus ~ label {
+    font-size: 24px !important;
+}
+
+.table-filters {
+    background-color: #F2F2F2;
+    padding: 10px 16px;
+    position: relative;
+}
+
+.table-filters .search-icon {
+    font-size: 30px;
+    color: #95939b;
+    position: absolute;
+    top: 4px;
+    left: 16px;
+}
+
+.table-filters input.search-input {
+    height: 30px;
+    border-radius: 15px;
+    border: 0 none;
+    padding: 0 12px;
+    margin-left: 40px;
+    margin-right: 20px;
+    width: 400px;
+}
+
+@media (max-width: 523px) {
+    .table-filters input.search-input {
+        width: calc(100% - 43px);
+    }
+}
+
+@media (max-width: 425px) {
+    .checkbox-inline.block-mobile {
+        display: block;
+        margin-left: 0 !important;
+        padding: 0;
+    }
+
+    .checkbox-inline.block-mobile:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.form-profile-picture img {
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.form-profile-picture {
+    text-align: center;
+}
+
+.form-field {
+    /*margin-bottom: 15px;*/
+    min-height: 44px;
+}
+.bg-blue-taksy {
+    background-color: #00aeef;
+    color: white;
+}
+
+.form-field label {
+    font-weight: normal;
+    font-size: 12px;
+    color: #00516f;
+    display: block;
+    margin-bottom: 0;
+}
+
+.form-field span {
+    font-size: 16px;
+    /*color: #333;*/
+    display: inline-block;
+}
+
+.form-field span.ellipsis {
+    width: 100%;
+}
+
+.form-picture-fields > .picture {
+    display: inline-block;
+    width: 80px;
+    margin-right: 12px;
+    vertical-align: top;
+}
+
+.form-picture-fields > .fields {
+    display: inline-block;
+    width: calc(100% - 92px);
+    vertical-align: top;
+}
+
+.form-picture-fields > .middle-fields {
+    display: inline-block;
+    width: calc(100% - 182px);
+    vertical-align: top;
+}
+
+.form-picture-fields > .rating {
+    display: inline-block;
+    width: 80px;
+    vertical-align: top;
+    text-align: right;  
+}
+
+.table-responsive {
+    margin-right: -1px;
+}
+
+.top-search {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.top-search input {
+    width: 100%;
+    border-radius: 15px;
+    height: 30px;
+    padding: 6px 10px 6px 25px;
+    border: 1px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.top-search i {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.card-tab-heading {
+    z-index: 4;
+    /*margin: 0 10px -5px;*/
+    /*border-radius: 3px 3px 0 0;*/
+    /*overflow: hidden;*/
+    display: inline-block;
+    box-shadow: 0 1px 0 rgba(20, 20, 20, 0.075);
+    background-color: white;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);*/
+    /*background-color: white;*/
+}
+
+.card-tab-heading ~ div {
+    margin-top: 44px;
+    height: calc(100vh - 109px);
+    overflow: auto;
+}
+
+.card-tab-heading a {
+    display: inline-block;
+    font-size: 18px;
+    border-bottom: 3px solid white;
+    padding: 8px 12px;
+    color: #9F9DA4;
+    text-transform: uppercase;
+}
+
+.card-tab-heading a:hover,
+.card-tab-heading a:focus {
+    text-decoration: none;
+}
+
+.card-tab-heading a.selected {
+    color: red;
+    border-color: red;
+}
+
+.white-link, .white-link:hover {
+    color: white;
+}
+
+.btn-white, .btn-white:focus {
+    color: white;
+}
+
+.btn-white:hover {
+    background-color: white;
+    border-color: white;
+    color: #00AEEF;
+}
+
+.mda-form-label {
+    color: #6C7177;
+    font-size: .85em;
+    margin-bottom: 5px;
+    opacity: .5;
+}
+
+.fixed-btn-bot {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.card-button .card {
+    background-color: white;
+    color: #9F9DA4;
+    transition: .3s;
+    position: relative;
+    bottom: 0;
+}
+
+.card-button:hover .card {
+    color: white;
+    background-color: #05AFE9;
+    transition: .3s;
+    bottom: 5px;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-button:hover {
+    text-decoration: none;
+}
+
+.message-sender {
+    color: #777;
+    display: block;
+}
+
+.my-modal.image-modal a.close-btn {
+    color: white;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    line-height: 0;
+    transition: 0.3s;
+}
+
+.my-modal.image-modal a.close-btn:hover {
+    opacity: 1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+@keyframes fade-in-animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fade-in {
+    animation-name: fade-in-animation;
+    animation-duration: 1s;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        margin-bottom: 0;
+        border: 0 none;
+    }
+}
+
+.table-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    margin: -10px 10px -10px -10px;
+}
+
+.table-profile-img ~ span {
+    display: inline-block;
+    width: calc(100% - 50px);
+    vertical-align: middle;
+}
+
+.ng-table tbody tr td.actions-col {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.ng-table tbody tr td.actions-col a.action-icon {
+    font-size: 32px;
+    margin-top: -4px;
+    display: inline-block;
+    line-height: 0;
+    color: black;
+    vertical-align: middle;
+}
+
+td.td-btn-group button:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+td.td-btn-group button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+table.nowrap td {
+    white-space: nowrap;
+}
+
+.row.no-margin {
+    margin: 0;
+}
+
+.row.no-padding > div {
+    padding: 0;
+}
+
+table.projects-table .thumb-col {
+    padding: 0;
+    width: 60px;
+}
+
+table.projects-table .thumb-col img {
+    width: 60px;
+}
+
+table.projects-table .link-col {
+    padding: 0;
+}
+
+table.projects-table .link-col a {
+    display: block;
+    padding: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.options-col {
+    width: 60px;
+    padding-left: 0 !important;
+}
+
+.options-col.one-option {
+    width: 33px;
+}
+
+.options-col a {
+    font-size: 20px;
+}
+
+.options-col a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.ng-table tbody tr td.photo-col {
+    width: 59px;
+    padding: 4px;
+}
+
+.photo-col img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+table.projects-table .link-col a:hover {
+    text-decoration: none;
+    /*background-color: #f1f1f1;*/
+}
+
+.page-project .card-heading .project-date {
+    color: black;
+    display: block;
+    font-size: 16px;
+}
+
+.page-project .project-img {
+    width: 100%;
+}
+
+.project-form {
+    padding: 16px;
+}
+
+.project-form.form-fields {
+    padding-bottom: 5px;
+}
+
+.project-form .project-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.page-project .project-form .project-item .title {
+    color: #EAC140;
+    font-weight: bold;
+    display: block;
+}
+
+.page-project .project-form .project-item .content {
+    display: block;
+    color: black;
+}
+
+.page-videos .video-card {
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.page-videos .video-card > div,
+.page-videos .video-card > ul {
+    padding: 15px;
+}
+
+.page-videos .video-card .video-title {
+    font-size: 18px;
+    color: white;
+    position: relative;
+    font-weight: bold;
+}
+
+.page-videos .video-card .video-title > a {
+    float: right;
+    padding: 0 10px;
+    color: white;
+}
+
+.link-item .link-input,
+.link-item .link-button {
+    display: inline-block;
+}
+
+.link-item .link-button {
+    width: 40px;
+    padding-left: 10px;
+}
+
+.link-item .link-input {
+    width: calc(100% - 40px);
+}
+
+.input-big-label {
+    display: block;
+    color: #9F9DA4;
+    opacity: .5;
+    font-size: 25px;
+}
+
+.image-input img {
+    width: 100%;
+    /*margin-bottom: 15px;*/
+}
+
+.page-about .address-list {
+    margin-bottom: 15px;
+}
+
+.periodo-element {
+    display: inline-block;
+}
+
+.periodo-element span {
+    margin-right: 10px;
+}
+
+.periodo-element input {
+    display: inline-block;
+    width: auto;
+}
+
+.periodo-element input:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card .card-heading .btn {
+    margin-top: -5px;
+}

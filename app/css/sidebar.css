@@ -1,0 +1,62 @@
+.sidebar-content {
+    background-color: #fff;
+}
+
+.sidebar-content .collapse-btn-div {
+    text-align: right;
+    padding: 0 10px 10px;
+}
+
+.sidebar-content .collapse-btn-div a {
+    display: inline-block;
+    color: #203458;
+}
+
+.sidebar-content .collapse-btn-div a:hover {
+    text-decoration: none;
+}
+
+.sidebar-content .collapse-btn-div a .icon-content {
+    border-radius: 50%;
+    background-color: #203458;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    margin-left: 7px;
+}
+
+.sidebar-content .collapse-btn-div a > span {
+    vertical-align: middle;
+}
+
+.sidebar-content .collapse-btn-div a .icon-content i {
+    font-size: 16px;
+    color: white;
+}
+
+.sidebar-content.collapsed .collapse-btn-div {
+    text-align: center;
+}
+
+.sidebar-content.collapsed .collapse-btn-div a > span.collapse-label {
+    display: none;
+}
+
+.sidebar-content.collapsed .collapse-btn-div a .icon-content {
+    margin-left: 0;
+}
+
+.sidebar-content.collapsed {
+    width: 56px;
+}
+
+.sidebar-content.collapsed .itemName {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .sidebar-content .collapse-btn-div {
+        display: none;
+    }
+}

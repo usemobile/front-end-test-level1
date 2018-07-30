@@ -1,0 +1,27 @@
+[
+	{
+		"id": "1",
+		"clientId": "2",
+		"clientName": "Gabriel",
+		"date": new Date(),
+		"value": 15.6
+	},{
+		"id": "2",
+		"clientId": "4",
+		"clientName": "Joana",
+		"date": new Date(),
+		"value": 44.25
+	},{
+		"id": "3",
+		"clientId": "3",
+		"clientName": "Lara",
+		"date": new Date(),
+		"value": 32.1
+	},{
+		"id": "4",
+		"clientId": "1",
+		"clientName": "João",
+		"date": new Date(),
+		"value": 122.48
+	}
+]

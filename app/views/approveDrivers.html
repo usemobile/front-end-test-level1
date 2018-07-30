@@ -1,0 +1,53 @@
+<div ng-controller="ApproveDriversCtrl">
+	<div class="top-search">
+    <i class="search-icon ion-ios-search-strong"></i>
+    <input type="text" placeholder="Buscar por nome, CPF ou placa" class="search-input" ng-model="filterValue" ng-change="filter(filterValue)"/>
+  </div>
+	<!-- <div deckgrid="" source="filteredDrivers" cardtemplate="{{viewpath('approve-driver-card.html')}}" class="deckgrid clearfix"></div> -->
+	<div class="card">
+        <!-- <div class="card-heading">
+            <div class="card-title">Histórico</div>
+        </div> -->
+        <div class="card-body no-padding">
+            <div class="table-responsive">
+                <table ng-table="tableParams">
+                    <tbody>
+                        <tr ng-repeat="item in $data">
+                            <td data-title="'Nome'" sortable="'name'" nowrap><img class="table-profile-img" ng-if="item.photo" ng-src="{{item.photo}}"/><img class="table-profile-img" ng-if="!item.photo" src="/assets/default-avatar.png"/><span>{{item.name}}</span></td>
+                            <td data-title="'E-mail'" sortable="'email'">{{item.email}}</td>
+                            <td data-title="'Telefone'" sortable="'phone'">{{item.phone}}</td>
+                            <td data-title="'CNH'" sortable="'cnh'"><a ng-click="visualize(item.cnh)">CNH</a></td>
+                            <td data-title="'Licenciamento'" sortable="'licensing'" nowrap><a ng-click="visualize(item.licensing)">Licenciamento do veículo</a></td>
+                            <td data-title="'Alvará'" sortable="'alvara'"> <a ng-click="visualize(item.alvara)">Alvará</a></td>
+                            <td data-title="'Status'" class="actions-col td-btn-group" sortable="'status'" nowrap="">
+                        		<button type="button" class="btn btn-sm btn-success" ng-click="approve(item)">APROVAR</button><button type="button" class="btn btn-sm btn-danger" ng-click="disapprove(item)">REPROVAR</button>
+                            </td>
+                            <td data-title="'Ações'" class="actions-col">
+                                <a ng-href="/#/app/driver/{{item.id}}" class="action-icon"><i class="ion-ios-eye"></i></a>
+                            </td>
+                        </tr>
+                        <tr ng-show="!filteredDrivers || filteredDrivers.length == 0">
+                            <td class="no-registers" colspan="38">
+                                <span>Sem registros</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-footer">
+                    <span class="footer-numbers">
+                        {{(tableParams.page()-1)*tableParams.parameters().count + 1}}-<span ng-show="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.total()}}</span><span ng-hide="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.page()*tableParams.parameters().count}}</span> of {{tableParams.total()}}
+                    </span>
+                    <div class="footer-buttons">
+                        <a ng-disabled="tableParams.page() <= 1" ng-click="tableParams.page(tableParams.page()-1)">
+                            <i class="ion-ios-arrow-left"></i>
+                        </a>
+                        <a ng-disabled="tableParams.page() >= tableParams.total()/tableParams.parameters().count" ng-click="tableParams.page(tableParams.page()+1)">
+                            <i class="ion-ios-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-include src="'app/templates/approveDriver.html'"></ng-include>

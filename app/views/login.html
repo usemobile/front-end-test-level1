@@ -1,0 +1,44 @@
+<div class="container-full page-login" ng-controller="LoginCtrl">
+  <div class="container container-xs">
+    <form name="loginForm" ng-submit="validateForm()" novalidate="" class="card b0 form-validate">
+      <div class="card-heading">
+        <!-- <div class="card-title text-center">Login</div> -->
+        <div>
+            <img src="app/img/logo.png" class="login-logo"/>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="mda-form-group mda-input-group">
+          <div class="mda-form-control">
+            <input type="text" name="username" ng-model="account.username" required="" class="form-control" placeholder="Usuário ou e-mail cadastrado"/>
+            <div class="mda-form-control-line"></div>
+            <label>Usuário</label>
+          </div>
+          <div ng-messages="loginForm.username.$error" class="text-danger"><span ng-message="email">Digite um e-mail válido</span></div><span class="mda-input-group-addon"><i class="ion-ios-person-outline"></i></span>
+        </div>
+        <div class="mda-form-group mda-input-group">
+          <div class="mda-form-control">
+            <input type="password" name="accountPassword" ng-model="account.password" required="" class="form-control"/>
+            <div class="mda-form-control-line"></div>
+            <label>Senha</label>
+        </div><span class="mda-input-group-addon"><i class="ion-ios-locked-outline"></i></span>
+        </div>
+        <div class="form-group">
+            <div class="checkbox c-checkbox">
+                <label>
+                    <input type="checkbox" value=""/><span class="ion-checkmark-round"></span> Salvar senha
+                </label>
+            </div>
+          </div>
+          <div class="form-group buttons-group">
+              <button type="submit" ng-disabled="loginForm.$invalid || loginForm.$pristine" class="btn btn-info">ENTRAR</button>
+          </div>
+          <div class="form-group footer-group" style="text-align: right">
+            <!-- <a ui-sref="user.signup" class="text-inherit">Registre-se</a> -->
+            <a ui-sref="user.recover" class="text-inherit">Esqueceu a senha?</a>
+          </div>
+      </div>
+    </form>
+    <!-- <div class="text-center text-sm"><a ui-sref="user.recover" class="text-inherit">Forgot password?</a></div> -->
+  </div>
+</div>

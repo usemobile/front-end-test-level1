@@ -1,0 +1,232 @@
+<div ng-controller="DashboardCtrl" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 col-lg-3">
+      <div class="card">
+        <div class="card-body pv">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="m0 text-thin">{{info.joined}}</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Novos cadastros</small>
+            </div>
+            <div class="pull-right mt-lg">
+              <sparkline values="sparkValue2" options="sparkOpts" data-line-color="{{colorByName('green-500')}}"></sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-lg-3">
+      <div class="card">
+        <div class="card-body pv">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="m0 text-thin">{{info.travel}}</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-down-b"></em>Viagens</small>
+            </div>
+            <div class="pull-right mt-lg">
+              <sparkline values="sparkValue1" options="sparkOpts" data-line-color="{{colorByName('info')}}"></sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-lg-3 visible-lg">
+      <div class="card">
+        <div class="card-body pv">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="m0 text-thin">{{info.cancellation}}</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Cancelamentos</small>
+            </div>
+            <div class="pull-right mt-lg">
+              <sparkline values="sparkValue3" options="sparkOpts" data-line-color="{{colorByName('purple-400')}}"></sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-lg-3 visible-lg">
+      <div class="card">
+        <div class="card-body pv">
+          <div class="clearfix">
+            <div class="pull-left">
+              <h4 class="m0 text-thin">{{info.revenue}}</h4><small class="m0 text-muted"><em class="mr-sm ion-arrow-up-b"></em>Receitas</small>
+            </div>
+            <div class="pull-right mt-lg">
+              <sparkline values="sparkValue4" options="sparkOpts" data-line-color="{{colorByName('pink-500')}}"></sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-9 col-md-12">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-heading">
+              <!-- START dropdown-->
+              <div uib-dropdown="dropdown2" class="pull-right dropdown">
+                <button type="button" uib-dropdown-toggle="" class="btn btn-default btn-flat btn-flat-icon ripple"><em class="ion-android-more-vertical"></em></button>
+                <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                  <li><a href="">Last 30 days</a></li>
+                  <li><a href="">Last week</a></li>
+                  <li><a href="">Last year</a></li>
+                </ul>
+              </div>
+              <!-- END dropdown-->
+              <div class="card-title">Gráfico total de viagens x total de clientes</div><small>Nulla commodo blandit cursus.</small>
+            </div>
+            <div class="card-body">
+              <!-- <div role="group" aria-label="..." class="pull-right pr-sm btn-group btn-group-sm">
+                <button type="button" class="btn btn-default btn-xs btn-default">Total</button>
+                <button type="button" class="btn btn-default btn-xs btn-default">Average</button>
+              </div> -->
+              <flot dataset="lineData" options="lineOptions" class="flot-chart flot-chart-lg"></flot>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-lg-4 visible-lg">
+		      <div class="card">
+		      	<div class="card-heading">
+		      		<div class="card-title">Total de Receita</div>
+		      	</div>
+		        <div class="card-body pv">
+		          <div class="clearfix">
+		            <div class="pull-right">
+		              <h3 class="m0 text-thin">R$ {{info.revenue | currency}}</h3>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="card">
+		      	<div class="card-heading">
+		      		<div class="card-title">Total de Doações</div>
+		      	</div>
+		        <div class="card-body pv">
+		          <div class="clearfix">
+		            <div class="pull-right">
+		              <h3 class="m0 text-thin">R$ {{info.donation | currency}}</h3>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-lg-12">
+          <div class="card">
+            <div class="card-heading">
+              <div class="card-title">Motoristas</div>
+            </div>
+            <div class="card-body p0">
+              <div class="">
+                <ui-gmap-google-map center="map.center" zoom="map.zoom" class="gmap" events="mapEvents"></ui-gmap-google-map>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xs-12">
+      <!-- Activity feed-->
+      <div class="card">
+        <div class="card-heading">
+          <!-- START dropdown-->
+          <div uib-dropdown="dropdown2" class="pull-right dropdown">
+            <button type="button" uib-dropdown-toggle="" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+            <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+              <li><a href="">Last 30 days</a></li>
+              <li><a href="">Last week</a></li>
+              <li><a href="">Last year</a></li>
+            </ul>
+          </div>
+          <!-- END dropdown-->
+          <div class="card-title">Atividade recente</div><small>What's people doing right now</small>
+        </div>
+        <div class="card-body bb fade-in" ng-repeat="activity in activities">
+          <div ng-show="activity.type == 'cancelledByPassenger'">
+            <p class="pull-left mr"><a ng-href="/#/app/client/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p><a ng-href="/#/app/client/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> cancelou uma viagem</span></p>
+              <p><em class="ion-eye icon-fw"></em><a href="">Detalhes da viagem</a></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'acceptedTravel'">
+            <p class="pull-left mr"><a ng-href="/#/app/driver/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p><a ng-href="/#/app/driver/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> aceitou uma viagem</span></p>
+              <p><em class="ion-eye icon-fw"></em><a href="">Detalhes da viagem</a></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'newRequest'">
+            <p class="pull-left mr"><a ng-href="/#/app/client/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p><a ng-href="/#/app/client/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> pediu um Taksy</span></p>
+              <!-- <p><em class="ion-eye icon-fw"></em><a href="">Detalhes da viagem</a></p> -->
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'cancelledByDriver'">
+            <p class="pull-left mr"><a ng-href="/#/app/driver/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p>O motorista <a ng-href="/#/app/driver/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> cancelou uma viagem</span></p>
+              <p><em class="ion-eye icon-fw"></em><a href="">Detalhes da viagem</a></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'completedTravel'">
+            <div class="oh">
+              <p><a ng-href="/#/app/client/{{activity.info.passengerId}}">{{activity.info.passengerName}}</a><span class="spr"> fez uma viagem com o motorista</span><a ng-href="/#/app/driver/{{activity.info.driverId}}">{{activity.info.driverName}}</a></p>
+              <p><em class="ion-eye icon-fw"></em><a href="">Detalhes da viagem</a></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'initTravel'">
+            <p class="pull-left mr"><a ng-href="/#/app/driver/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p>O motorista <a ng-href="/#/app/driver/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> iniciou uma viagem</span></p>
+              <p><em class="ion-eye icon-fw"></em><a href="">Detalhes da viagem</a></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'newPassenger'">
+            <p class="pull-left mr"><a ng-href="/#/app/client/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p><a ng-href="/#/app/client/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> é um novo cliente</span></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+          <div ng-show="activity.type == 'newDriver'">
+            <p class="pull-left mr"><a ng-href="/#/app/driver/{{activity.info.id}}">
+              <img ng-src="{{activity.info.photo}}" ng-show="activity.info.photo" alt="User" class="img-circle thumb32"/>
+              <img src="/assets/default-avatar.png" ng-hide="activity.info.photo" alt="User" class="img-circle thumb32"/>
+            </a></p>
+            <div class="oh">
+              <p><a ng-href="/#/app/driver/{{activity.info.id}}">{{activity.info.name}}</a><span class="spr"> é um novo motorista</span></p>
+              <div class="pull-left text-muted"><em class="ion-android-time mr-sm"></em><span>{{activity.formattedDate}}</span></div>
+            </div>
+          </div>
+        </div><a class="card-footer btn btn-flat btn-default" ng-click="moreActivities()"><small class="text-center text-muted lh1">Ver mais atividades</small></a>
+      </div>
+    </div>
+  </div>
+</div>

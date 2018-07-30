@@ -1,0 +1,8 @@
+<div ng-controller="DriversCtrl"> 
+  <div class="card-tab-heading">
+      <a ng-repeat="tab in tabs" ng-href="{{tab.url}}" ng-class="{'selected': tab.name == $state.$current.tab}">{{tab.name}}</a>
+    </div>
+  <div class="container container-lg">
+    <section ui-view="" autoscroll="false" ng-class="app.viewAnimation"></section>
+  </div>
+</div>

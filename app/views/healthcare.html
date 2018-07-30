@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<button type="button" class="btn btn-flat btn-info pull-right mb-lg" ng-click="add()">Adicionar plano</button>
+		</div>
+		<div class="col-md-12" ng-repeat="item in healthcares">
+			<div class="card">
+				<div class="card-heading bb">
+					<span class="card-title">{{item.name}}</span>
+					<button type="button" class="btn btn-flat btn-danger pull-right" ng-click="delete($index)">excluir</button>
+					<button type="button" class="btn btn-flat btn-info pull-right mr-sm" ng-click="edit($index)">editar</button>
+				</div>
+				<div class="card-body">
+					<div class="row no-margin">
+						<div class="col-md-6">
+							<div class="form-field">
+								<label>Prazo de retorno:</label>
+								<span>30 dias</span>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-field">
+								<label>Valor por consulta:</label>
+								<span>R$ {{item.value | currency}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<ng-include src="'app/templates/addHealthCare.html'"></ng-include>

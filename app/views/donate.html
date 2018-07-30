@@ -1,0 +1,59 @@
+<div class="" ng-controller="DonateCtrl">
+    <div class="content-body row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="container-fluid">
+                <div class="top-search">
+                    <i class="search-icon ion-ios-search-strong"></i>
+                    <input type="text" placeholder="Buscar duações" class="search-input" ng-model="filterValue" ng-change="filter(filterValue)"/>
+                </div>
+                <div class="card payment">
+                    <div class="card-heading">
+                        <div class="icon-heading-body">
+                            <div class="card-title">Doações</div>
+                        </div>
+                    </div>
+                    <div class="card-body no-padding">
+                        <div class="table-responsive">
+                            <table ng-table="tableParams">
+                                <tbody>
+                                    <tr ng-repeat="item in $data">
+                                        <td data-title="'Passageiro'" sortable="'clientName'">
+                                            <a ng-href="/#/app/client/{{item.clientId}}">{{item.clientName}}</a>
+                                        </td>
+                                        <td data-title="'Taxista'" sortable="'driverName'">
+                                            <a ng-href="/#/app/driver/{{item.driverId}}">{{item.driverName}}</a>
+                                        </td>
+                                        <td data-title="'Valor adicional'" sortable="'value'">
+                                            <span ng-show="item.value">R$ {{item.value}}</span>
+                                            <span ng-hide="item.value">R$ 0</span>
+                                        </td>
+                                        <td data-title="'Valor doado'" sortable="'rating'">R$ {{item.donate}}</td>
+                                        <td data-title="'Data'" sortable="'date'">{{item.date | date:"dd/MM/yyyy"}}</td>
+                                    </tr>
+                                    <tr ng-show="!donations || donations.length == 0">
+                                        <td class="no-registers" colspan="5">
+                                            <span>Sem registros</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="table-footer">
+                                    <span class="footer-numbers">
+                                        {{(tableParams.page()-1)*tableParams.parameters().count + 1}}-<span ng-show="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.total()}}</span><span ng-hide="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.page()*tableParams.parameters().count}}</span> of {{tableParams.total()}}
+                                    </span>
+                                <div class="footer-buttons">
+                                    <a ng-disabled="tableParams.page() <= 1" ng-click="tableParams.page(tableParams.page()-1)">
+                                        <i class="ion-ios-arrow-left"></i>
+                                    </a>
+                                    <a ng-disabled="tableParams.page() >= tableParams.total()/tableParams.parameters().count" ng-click="tableParams.page(tableParams.page()+1)">
+                                        <i class="ion-ios-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

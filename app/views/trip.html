@@ -1,0 +1,175 @@
+<div class="" ng-controller="TripCtrl">
+    <div class="container-overlap bg-blue-500">
+      <div class="media m0 pv">
+        <div class="row no-margin">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <a href="/#/app/trips" class="btn btn-flat btn-white ripple"><i class="ion-arrow-left-c mr-sm"></i>Voltar</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+                <h2 class="m0">21/08/2017</h2>
+                <!-- <div style="pointer-events: none" uib-rating="uib-rating" ng-model="3" max="5" readonly="" state-on="'ion-ios-star text-warning'" state-off="'ion-ios-star-outline'"></div> -->
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="card payment">
+                <div class="card-heading">
+                    <div class="icon-heading-body">
+                        <div class="card-title">Dados do Motorista</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-picture-fields">
+                        <div class="picture">
+                            <div class="form-profile-picture">
+                                <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"/>
+                            </div>
+                        </div><div class="middle-fields">
+                            <div class="form-field">
+                                <label>Nome</label>
+                                <span>Cesar Olimpio</span>
+                            </div>
+                            <div class="form-field m0">
+                                <label>E-mail</label>
+                                <span>cesarolimpio@gmail.com</span>
+                            </div>
+                        </div><div class="rating">
+                            <h2 class="m0">4.4</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="card payment">
+                <div class="card-heading">
+                    <div class="icon-heading-body">
+                        <div class="card-title">Dados do Cliente</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-picture-fields">
+                        <div class="picture">
+                            <div class="form-profile-picture">
+                                <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"/>
+                            </div>
+                        </div><div class="middle-fields">
+                            <div class="form-field">
+                                <label>Nome</label>
+                                <span>João João</span>
+                            </div>
+                            <div class="form-field m0">
+                                <label>Veículo</label>
+                                <span>Siena - XCJ-1234</span>
+                            </div>
+                        </div><div class="rating">
+                            <h2 class="m0">4.8</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card payment">
+                <div class="card-heading">
+                    <div class="icon-heading-body">
+                        <div class="card-title">Percurso</div>
+                    </div>
+                </div>
+                <div class="card-body no-padding">
+                    <div class="project-form form-fields">
+                        <div class="row no-margin">
+                            <div class="col-md-6">
+                                <div class="form-field">
+                                    <label>Origem - 10:30</label>
+                                    <span>Origem da corrida</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-field">
+                                    <label>Destino - 10:57</label>
+                                    <span>Destino da corrida</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-field">
+                                    <label>Tempo total</label>
+                                    <span>0:27</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-field">
+                                    <label>Valor</label>
+                                    <span>R$ 10,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <ui-gmap-google-map center="map.center" zoom="map.zoom" class="gmap"></ui-gmap-google-map>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="card payment">
+                <div class="card-heading">
+                    <div class="icon-heading-body">
+                        <div class="card-title">Informações</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <div class="form-field">
+                            <label>Passageiro</label>
+                            <span>Olivia</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-field">
+                            <label>Taxista</label>
+                            <span>Thiago</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-field">
+                            <label>Origem</label>
+                            <span>Av. Antônio dias, 493</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-field">
+                            <label>Destino</label>
+                            <span>Av. General Clark, 25</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="form-field">
+                            <label>Tempo</label>
+                            <span>0:27</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="form-field">
+                            <label>Valor</label>
+                            <span>R$ 10,00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="form-field">
+                            <label>Status</label>
+                            <span>Finalizado</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="form-field">
+                            <label>Avaliação</label>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>

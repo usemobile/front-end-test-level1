@@ -1,0 +1,26 @@
+<nav ng-controller="HeaderCtrl" class="header-body">
+    <ul>
+        <li ng-class="{'active': sidebarVisible}" class="visible-xs visible-sm hidden-md header-toggle-sidebar">
+            <a href="" ng-click="toggleSidebar()" ng-class="app.header.menulink" class="menu-link"><span><em></em></span></a>
+        </li>
+        <li ng-class="{'active': sidebarOffcanvasVisible}" ng-if="app.sidebar.offcanvas" class="hidden-xs hidden-sm">
+            <a href="" ng-click="toggleSidebarOffcanvasVisible()" ng-class="app.header.menulink" class="menu-link"><span><em></em></span></a>
+        </li>
+    </ul>
+    <div class="header-logo">
+        <img src="app/img/logo.png"></img>
+    </div>
+    <h2 ng-bind="$state.$current.title" class="header-title"></h2>
+    <ul class="pull-right">
+        <li uib-dropdown="" class="dropdown user-btn">
+            <a href="" uib-dropdown-toggle="" class="dropdown-toggle has-badge ripple">
+                <img ng-src="{{$root.userPicture || 'app/img/default-avatar.png'}}"/>
+            </a>
+            <ul uib-dropdown-menu="" class="dropdown-menu dropdown-menu-right md-dropdown-menu">
+                <li class="ripple ripple-block">
+                    <a href="javascript:;" ng-click="logout()"><em class="ion-log-out icon-fw"></em>Logout</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

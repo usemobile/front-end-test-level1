@@ -1,0 +1,72 @@
+<div ng-controller="CategoriesCtrl" class="container-fluid">
+	<div class="top-search">
+    <i class="search-icon ion-ios-search-strong"></i>
+    <input type="text" placeholder="Buscar por nome da categoria" class="search-input" ng-model="filterValue" ng-change="filter(filterValue)"/>
+  </div>
+	<div class="row">
+		<!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ng-repeat="category in filteredCategories">
+			<a ng-href="/#/app/category/{{category.objectId}}" class="card-button">
+				<div class="card">
+					<div class="card-heading">
+						<div class="card-title">{{category.name}}</div>
+					</div>
+					<div class="card-body pt0">
+						<div class="clearfix">
+							<div class="pull-right">
+								<h3 class="m0 text-thin">{{category.count}}</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div> -->
+		<div class="col-lg-12">
+			<div class="card">
+				<div class="card-heading">
+					<div class="icon-heading-body">
+						<div class="card-title">Categorias</div>
+					</div>
+					<div class="add-btn">
+						<button type="button" class="add-button btn btn-circle btn-info btn-lg ripple" ng-click="addCategory()">
+							<i class="ion-plus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body no-padding">
+					<div class="table-responsive">
+						<table ng-table="tableParams">
+							<tbody>
+								<tr ng-repeat="item in $data">
+									<td data-title="'Categoria'" sortable="'name'">{{item.name}}</td>
+									<td data-title="'Quantidade'" sortable="'count'">{{item.count}}</td>
+									<!-- <td data-title="'Ações'" class="actions-col">
+										<a ng-href="/#/app/client/{{item.objectId}}" class="action-icon"><i class="ion-ios-search-strong"></i></a>
+									</td> -->
+								</tr>
+								<tr ng-show="!filteredCategories || filteredCategories.length == 0">
+									<td class="no-registers" colspan="2">
+										<span>Sem registros</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="table-footer">
+							<span class="footer-numbers">
+								{{(tableParams.page()-1)*tableParams.parameters().count + 1}}-<span ng-show="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.total()}}</span><span ng-hide="tableParams.page() >= tableParams.total()/tableParams.parameters().count">{{tableParams.page()*tableParams.parameters().count}}</span> of {{tableParams.total()}}
+							</span>
+							<div class="footer-buttons">
+								<a ng-disabled="tableParams.page() <= 1" ng-click="tableParams.page(tableParams.page()-1)">
+									<i class="ion-ios-arrow-left"></i>
+								</a>
+								<a ng-disabled="tableParams.page() >= tableParams.total()/tableParams.parameters().count" ng-click="tableParams.page(tableParams.page()+1)">
+									<i class="ion-ios-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<ng-include src="'app/templates/addCategory.html'"></ng-include>

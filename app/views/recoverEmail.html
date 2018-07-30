@@ -1,0 +1,41 @@
+<div class="container-full page-login" ng-controller="RecoverCtrl">
+  <div ng-init="rec.mailSent = false" class="container container-xs">
+    <div ng-if="rec.mailSent" class="card b0 bg-success ng-fadeIn">
+      <div class="card-heading">
+          <div>
+              <img src="app/img/logo.png" class="login-logo"/>
+          </div>
+      </div>
+      <div class="card-body"><em class="ion-checkmark-round pull-right icon-lg"></em>
+          <h4 class="mt0">Email enviado!</h4>
+        <p>Verifique sua caixa de entrada e siga as instruções para redefinir sua senha</p>
+      </div>
+      <div class="card-footer text-right"><a ui-sref="user.login" class="btn btn-success btn-flat text-white">Login<em class="ion-ios-arrow-thin-right icon-fw"></em></a></div>
+    </div>
+    <form name="loginForm" novalidate="" ng-submit="sendUsername(account.username)" ng-if="!rec.mailSent" class="card b0 form-validate">
+      <div class="card-heading">
+          <div>
+              <img src="app/img/logo.png" class="login-logo"/>
+          </div>
+      </div>
+      <div class="card-body">
+          <p class="text-center text-inherit">Enviaremos uma nova senha para o e-mail vinculado ao seu username</p>
+        <div class="mda-form-group float-label mda-input-group">
+          <div class="mda-form-control">
+            <input type="text" name="username" ng-model="account.username" required="" class="form-control"/>
+            <div class="mda-form-control-line"></div>
+            <label>Username</label>
+          </div>
+          <div ng-messages="loginForm.username.$error" class="text-danger"><span ng-message="username">Digite um e-mail válido</span></div><span class="mda-input-group-addon"><i class="ion-ios-person-outline"></i></span>
+        </div>
+        <div class="form-group buttons-group">
+            <button type="submit" ng-disabled="loginForm.$invalid || loginForm.$pristine" class="btn btn-info">ENVIAR NOVA SENHA</button>
+        </div>
+        <div class="form-group footer-group" style="text-align: right">
+            <!-- <a ui-sref="user.recover" class="text-inherit">Não lembra seu </a> -->
+          <a ui-sref="user.login" class="text-inherit">Lembrou sua senha? Clique aqui.</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
