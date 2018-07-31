@@ -51,5 +51,5 @@ front-end-test-level1
 ### Dicas
 * O template foi feito baseado no projeto [Centric](http://themicon.co/theme/centric/v1.9.5/angularjs/#/app/dashboard). Conferir a documentação do mesmo deve ajudá-lo na construção das telas;
 * Não se preocupe com back-end e banco de dados. Queremos ver os comportamentos funcionando no front-end;
-* Seja amiga da [documentação do AngularJs](https://docs.angularjs.org/api);
+* Seja amigo da [documentação do AngularJs](https://docs.angularjs.org/api);
 * Tente comentar seu código nas linhas mais importantes.
