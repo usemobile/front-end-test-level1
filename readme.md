@@ -28,24 +28,24 @@ Uma breve documentação do template utilizado:
 ##### estrutura de pastas
 ```
 front-end-test-level1
-├ app
-| ├ css (arquivos de estilo .css)
-| ├ img (imagens utilizadasa no site)
-| ├ js
-| | ├ controller (controllers do AngularJs)
-| | ├ directive (diretivas do AngularJs)
-| | ├ factory (factories do AngularJs)
-| | └ app.js (configurações do template)
-| ├ templates (templates do AngularJs)
-| └ views (arquivos HTML das páginas do site)
-├ assets (arquivos gerais usados no template)
-├ bower_componentes (pacotes do bower)
-├ master (arquivos de configuração do template)
-├ node_modules (pacotes do npm)
-├ server (arquivos referentes ao template)
-├ vendor (mais arquivos referentes ao template)
-├ index.html (pagina inicial especificação dos arquivos a serem carregados)
-└ package.json (configuração do npm)
+├─ app
+|  ├─ css (arquivos de estilo .css)
+|  ├─ img (imagens utilizadasa no site)
+|  ├─ js
+|  |  ├─ controller (controllers do AngularJs)
+|  |  ├─ directive (diretivas do AngularJs)
+|  |  ├─ factory (factories do AngularJs)
+|  |  └─ app.js (configurações do template)
+|  ├─ templates (templates do AngularJs)
+|  └─ views (arquivos HTML das páginas do site)
+├─ assets (arquivos gerais usados no template)
+├─ bower_componentes (pacotes do bower)
+├─ master (arquivos de configuração do template)
+├─ node_modules (pacotes do npm)
+├─ server (arquivos referentes ao template)
+├─ vendor (mais arquivos referentes ao template)
+├─ index.html (pagina inicial especificação dos arquivos a serem carregados)
+└─ package.json (configuração do npm)
 ```
 
 ### Dicas
