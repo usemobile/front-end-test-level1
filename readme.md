@@ -8,9 +8,9 @@ Este repositório possui um projeto de site incompleto usando o framework **Angu
 * Na página **Clientes**, programe o comportamento de criar um novo registro de cliente na tabela (observe o layout localizado em `layouts/novo_cliente.png`);
 * Na página **Clientes**, crie também um modal para a edição de um registro de cliente, seguindo o layout localizado em `layouts/editar_cliente.png`. Programe também o comportamento para editar/remover o registro da tabela de clientes;
 * Na página **Clientes**, observe que existe um filtro que pesquisa os clientes da tabela pelo **nome** dos clientes. Faça uma melhoria no filtro, para que ele pesquise também pelo **sobrenome** e **CPF** do cliente;
-* Crie uma página para a listagem das **Compras** do dia, seguindo o mesmo padrão da página de clientes. Siga o layout localizado em `layouts/compras.png`. Lembre-se de adicionar uma opção no menu lateral para a página criada. Use os dados do arquivo `layouts\compras.json` para criar uma lista de compras e preencher a tabela;
+* Crie uma página para a listagem das **Compras** do dia, seguindo o mesmo padrão da página de clientes. Siga o layout localizado em `layouts/compras.png`. Lembre-se de adicionar uma opção no menu lateral para a página criada. Use os dados do arquivo `layouts/compras.json` para criar uma lista de compras e preencher a tabela;
 * Na página **Compras**, programe um comportamento para remover um registro de compra (adicione a opção de remover na coluna **Ações** da tabela);
-* Na página **Compras**, crie um modal para visualizar os detalhes da compra, seguindo o layout localizado em `layouts/compra_detalhe.png`. Use os dados do arquivo `layouts\compra_detalhe.json` para preencher a tabela.
+* Na página **Compras**, crie um modal para visualizar os detalhes da compra, seguindo o layout localizado em `layouts/compra_detalhe.png`. Use os dados do arquivo `layouts/compra_detalhe.json` para preencher a tabela.
 
 ### Requisitos
 * Ter o [Node.js](https://nodejs.org/) e npm instalado em seu computador;
