@@ -2,6 +2,7 @@
 # level 1
 
 Este repositório possui um projeto de site incompleto usando o framework **AngularJs**. Nós queremos avaliar o seu nível de conhecimento em conceitos básicos do desenvolvimento Web (HTML5, CCS3 e Javascript) e sua capacidade de trabalhar em templates utilizando o framework AngularJs. Não tenha pressa! Iremos avaliar a qualidade do seu código, mesmo que esteja incompleto. Siga as instruções, tente completar todas as missões, e boa sorte!
+##### tchesa update
 
 ### Missões
 * Trocar a logo usada no site pela logo da Usemobile, localizada em `app/img/use-logo.png` (certifique-se que de trocar também no layout mobile);
